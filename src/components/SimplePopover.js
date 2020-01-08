@@ -2,6 +2,9 @@ import React from "react";
 import Popover from "@material-ui/core/Popover";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
+import { ThemeProvider } from "@material-ui/core";
+
+import theme from "../theme";
 
 export default function SimplePopover() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -18,7 +21,7 @@ export default function SimplePopover() {
   const id = open ? "simple-popover" : undefined;
 
   return (
-    <div>
+    <ThemeProvider theme={theme}>
       <Button
         aria-describedby={id}
         variant="contained"
@@ -43,6 +46,6 @@ export default function SimplePopover() {
       >
         <Typography>The content of the Popover.</Typography>
       </Popover>
-    </div>
+    </ThemeProvider>
   );
 }

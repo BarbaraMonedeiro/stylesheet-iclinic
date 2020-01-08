@@ -39,6 +39,203 @@
       "compiler": "bit.envs/compilers/react@1.0.11"
     },
     "componentsDefaultDirectory": "components/{name}",
-    "packageManager": "npm"
+    "packageManager": "npm",
+    "overrides": {
+      "team-material.material/backdrop": {
+        "env": {
+          "compiler": "bit.envs/compilers/react@1.0.11"
+        }
+      },
+      "team-material.material/badges": {
+        "env": {
+          "compiler": "bit.envs/compilers/react@1.0.11"
+        }
+      },
+      "team-material.material/basic-grid": {
+        "env": {
+          "compiler": "bit.envs/compilers/react@1.0.11"
+        }
+      },
+      "team-material.material/bottom-navigation": {
+        "env": {
+          "compiler": "bit.envs/compilers/react@1.0.11"
+        }
+      },
+      "team-material.material/bread-crumb": {
+        "env": {
+          "compiler": "bit.envs/compilers/react@1.0.11"
+        }
+      },
+      "team-material.material/buttons": {
+        "env": {
+          "compiler": "bit.envs/compilers/react@1.0.11"
+        }
+      },
+      "team-material.material/card": {
+        "env": {
+          "compiler": "bit.envs/compilers/react@1.0.11"
+        }
+      },
+      "team-material.material/checkbox": {
+        "env": {
+          "compiler": "bit.envs/compilers/react@1.0.11"
+        }
+      },
+      "team-material.material/chips": {
+        "env": {
+          "compiler": "bit.envs/compilers/react@1.0.11"
+        }
+      },
+      "team-material.material/color-sample": {
+        "env": {
+          "compiler": "bit.envs/compilers/react@1.0.11"
+        }
+      },
+      "team-material.material/customized-tooltips": {
+        "env": {
+          "compiler": "bit.envs/compilers/react@1.0.11"
+        }
+      },
+      "team-material.material/date-picker": {
+        "env": {
+          "compiler": "bit.envs/compilers/react@1.0.11"
+        }
+      },
+      "team-material.material/expansion-panel": {
+        "env": {
+          "compiler": "bit.envs/compilers/react@1.0.11"
+        }
+      },
+      "team-material.material/form-dialog": {
+        "env": {
+          "compiler": "bit.envs/compilers/react@1.0.11"
+        }
+      },
+      "team-material.material/full-screen-modal": {
+        "env": {
+          "compiler": "bit.envs/compilers/react@1.0.11"
+        }
+      },
+      "team-material.material/icons": {
+        "env": {
+          "compiler": "bit.envs/compilers/react@1.0.11"
+        }
+      },
+      "team-material.material/lists": {
+        "env": {
+          "compiler": "bit.envs/compilers/react@1.0.11"
+        }
+      },
+      "team-material.material/paper": {
+        "env": {
+          "compiler": "bit.envs/compilers/react@1.0.11"
+        }
+      },
+      "team-material.material/positioned-poper": {
+        "env": {
+          "compiler": "bit.envs/compilers/react@1.0.11"
+        }
+      },
+      "team-material.material/positioned-snackbar": {
+        "env": {
+          "compiler": "bit.envs/compilers/react@1.0.11"
+        }
+      },
+      "team-material.material/progress": {
+        "env": {
+          "compiler": "bit.envs/compilers/react@1.0.11"
+        }
+      },
+      "team-material.material/radio": {
+        "env": {
+          "compiler": "bit.envs/compilers/react@1.0.11"
+        }
+      },
+      "team-material.material/select": {
+        "env": {
+          "compiler": "bit.envs/compilers/react@1.0.11"
+        }
+      },
+      "team-material.material/shadows": {
+        "env": {
+          "compiler": "bit.envs/compilers/react@1.0.11"
+        }
+      },
+      "team-material.material/simple-dialog": {
+        "env": {
+          "compiler": "bit.envs/compilers/react@1.0.11"
+        }
+      },
+      "team-material.material/simple-popover": {
+        "env": {
+          "compiler": "bit.envs/compilers/react@1.0.11"
+        }
+      },
+      "team-material.material/simple-tabs": {
+        "env": {
+          "compiler": "bit.envs/compilers/react@1.0.11"
+        }
+      },
+      "team-material.material/sliders": {
+        "env": {
+          "compiler": "bit.envs/compilers/react@1.0.11"
+        }
+      },
+      "team-material.material/snackbar": {
+        "env": {
+          "compiler": "bit.envs/compilers/react@1.0.11"
+        }
+      },
+      "team-material.material/spacing": {
+        "env": {
+          "compiler": "bit.envs/compilers/react@1.0.11"
+        }
+      },
+      "team-material.material/stepper": {
+        "env": {
+          "compiler": "bit.envs/compilers/react@1.0.11"
+        }
+      },
+      "team-material.material/switch": {
+        "env": {
+          "compiler": "bit.envs/compilers/react@1.0.11"
+        }
+      },
+      "team-material.material/table": {
+        "env": {
+          "compiler": "bit.envs/compilers/react@1.0.11"
+        }
+      },
+      "team-material.material/text-field": {
+        "env": {
+          "compiler": "bit.envs/compilers/react@1.0.11"
+        }
+      },
+      "team-material.material/tooltips": {
+        "env": {
+          "compiler": "bit.envs/compilers/react@1.0.11"
+        }
+      },
+      "team-material.material/transfer-list": {
+        "env": {
+          "compiler": "bit.envs/compilers/react@1.0.11"
+        }
+      },
+      "team-material.material/typography-sample": {
+        "env": {
+          "compiler": "bit.envs/compilers/react@1.0.11"
+        }
+      },
+      "team-material.material/vertical-stepper": {
+        "env": {
+          "compiler": "bit.envs/compilers/react@1.0.11"
+        }
+      },
+      "team-material.material/vertical-tabs": {
+        "env": {
+          "compiler": "bit.envs/compilers/react@1.0.11"
+        }
+      }
+    }
   }
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import { ThemeProvider } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import BottomNavigation from "@material-ui/core/BottomNavigation";
 import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
@@ -6,6 +7,8 @@ import FolderIcon from "@material-ui/icons/Folder";
 import RestoreIcon from "@material-ui/icons/Restore";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
+
+import theme from "../theme";
 
 const useStyles = makeStyles({
   root: {
@@ -22,7 +25,7 @@ export default function LabelBottomNavigation() {
   };
 
   return (
-    <React.Fragment>
+    <ThemeProvider theme={theme}>
       <BottomNavigation
         value={value}
         onChange={(event, newValue) => {
@@ -61,6 +64,6 @@ export default function LabelBottomNavigation() {
           icon={<FolderIcon />}
         />
       </BottomNavigation>
-    </React.Fragment>
+    </ThemeProvider>
   );
 }

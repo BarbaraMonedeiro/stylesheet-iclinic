@@ -2,6 +2,9 @@ import React from "react";
 import FormGroup from "@material-ui/core/FormGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Switch from "@material-ui/core/Switch";
+import { ThemeProvider } from "@material-ui/core";
+
+import theme from "../theme";
 
 export default function SwitchLabels() {
   const [state, setState] = React.useState({
@@ -16,6 +19,7 @@ export default function SwitchLabels() {
   };
 
   return (
+    <ThemeProvider theme={theme}>
     <FormGroup row>
       <Switch
         checked={state.checkedA}
@@ -116,5 +120,6 @@ export default function SwitchLabels() {
         labelPlacement="end"
       />
     </FormGroup>
+    </ThemeProvider>
   );
 }

@@ -1,6 +1,9 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
+import { ThemeProvider } from "@material-ui/core";
+
+import theme from "../theme";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -17,6 +20,7 @@ export default function SimplePaper() {
   const classes = useStyles();
 
   return (
+    <ThemeProvider theme={theme}>
     <div className={classes.root}>
       <Paper elevation={0} />
       <Paper />
@@ -24,5 +28,6 @@ export default function SimplePaper() {
       <Paper variant="outlined" />
       <Paper variant="outlined" square />
     </div>
+    </ThemeProvider>
   );
 }

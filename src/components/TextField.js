@@ -1,6 +1,9 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
+import { ThemeProvider } from "@material-ui/core";
+
+import theme from "../theme";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -17,6 +20,7 @@ export default function LayoutTextFields() {
   const classes = useStyles();
 
   return (
+    <ThemeProvider theme={theme}>
     <div className={classes.root}>
       <div>
         <TextField
@@ -138,5 +142,6 @@ export default function LayoutTextFields() {
         />
       </div>
     </div>
+    </ThemeProvider>
   );
 }

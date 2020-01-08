@@ -5,6 +5,9 @@ import Badge from "@material-ui/core/Badge";
 import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 import MailIcon from "@material-ui/icons/Mail";
+import { ThemeProvider } from "@material-ui/core";
+
+import theme from "../theme";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -28,7 +31,11 @@ export default function SimpleBadge() {
   const circle = <div className={clsx(classes.shape, classes.shapeCircle)} />;
 
   return (
+    <ThemeProvider theme={theme}>
     <div className={classes.root}>
+      <Typography variant="h5" gutterBottom>
+        Test auto PR Bit + Git 1.0.4
+      </Typography>
       <Badge badgeContent={4} color="primary">
         <MailIcon />
       </Badge>
@@ -64,5 +71,6 @@ export default function SimpleBadge() {
         {circle}
       </Badge>
     </div>
+    </ThemeProvider>
   );
 }

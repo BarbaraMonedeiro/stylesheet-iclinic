@@ -1,4 +1,5 @@
 import React from "react";
+import { ThemeProvider } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import List from "@material-ui/core/List";
@@ -8,6 +9,8 @@ import ListItemText from "@material-ui/core/ListItemText";
 import Checkbox from "@material-ui/core/Checkbox";
 import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
+
+import theme from "../theme";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -106,6 +109,7 @@ export default function TransferList() {
   );
 
   return (
+    <ThemeProvider theme={theme}>
     <Grid
       container
       spacing={2}
@@ -160,5 +164,6 @@ export default function TransferList() {
       </Grid>
       <Grid item>{customList(right)}</Grid>
     </Grid>
+    </ThemeProvider>
   );
 }

@@ -8,6 +8,9 @@ import CheckBoxOutlineBlankIcon from "@material-ui/icons/CheckBoxOutlineBlank";
 import CheckBoxIcon from "@material-ui/icons/CheckBox";
 import Favorite from "@material-ui/icons/Favorite";
 import FavoriteBorder from "@material-ui/icons/FavoriteBorder";
+import { ThemeProvider } from "@material-ui/core";
+
+import theme from "../theme";
 
 export default function Checkboxes() {
   const [checked, setChecked] = React.useState(true);
@@ -25,7 +28,7 @@ export default function Checkboxes() {
     setState({ ...state, [name]: event.target.checked });
   };
   return (
-    <div>
+    <ThemeProvider theme={theme}>
       <Checkbox
         checked={checked}
         onChange={handleChange}
@@ -168,6 +171,6 @@ export default function Checkboxes() {
           />
         </FormGroup>
       </FormControl>
-    </div>
+    </ThemeProvider>
   );
 }

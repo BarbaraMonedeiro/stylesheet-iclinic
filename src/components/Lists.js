@@ -15,6 +15,9 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import FolderIcon from "@material-ui/icons/Folder";
 import DeleteIcon from "@material-ui/icons/Delete";
+import { ThemeProvider } from "@material-ui/core";
+
+import theme from "../theme";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -43,6 +46,8 @@ export default function InteractiveList() {
   const [secondary, setSecondary] = React.useState(false);
 
   return (
+    <ThemeProvider theme={theme}>
+
     <div className={classes.root}>
       <FormGroup row>
         <FormControlLabel
@@ -157,5 +162,6 @@ export default function InteractiveList() {
         </Grid>
       </Grid>
     </div>
+    </ThemeProvider>
   );
 }

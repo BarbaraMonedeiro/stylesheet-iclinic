@@ -3,6 +3,9 @@ import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import Tooltip from "@material-ui/core/Tooltip";
+import { ThemeProvider } from "@material-ui/core";
+
+import theme from "../theme";
 
 const useStyles = makeStyles({
   root: {
@@ -14,6 +17,7 @@ export default function PositionedTooltips() {
   const classes = useStyles();
 
   return (
+    <ThemeProvider theme={theme}>
     <div className={classes.root}>
       <Grid container justify="center">
         <Grid item>
@@ -74,5 +78,6 @@ export default function PositionedTooltips() {
         </Grid>
       </Grid>
     </div>
+    </ThemeProvider>
   );
 }

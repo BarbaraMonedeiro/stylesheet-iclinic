@@ -2,10 +2,13 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Avatar from "@material-ui/core/Avatar";
 import Typography from "@material-ui/core/Typography";
+import { ThemeProvider } from "@material-ui/core";
 import Chip from "@material-ui/core/Chip";
 import Grid from "@material-ui/core/Grid";
 import FaceIcon from "@material-ui/icons/Face";
 import DoneIcon from "@material-ui/icons/Done";
+
+import theme from "../theme";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -30,6 +33,7 @@ export default function Chips() {
   };
 
   return (
+    <ThemeProvider theme={theme}>
     <div className={classes.root}>
       <Typography variant="h5" gutterBottom>
         Default
@@ -294,5 +298,6 @@ export default function Chips() {
         </Grid>
       </Grid>
     </div>
+    </ThemeProvider>
   );
 }

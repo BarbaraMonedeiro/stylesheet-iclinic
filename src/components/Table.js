@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import clsx from "clsx";
 import { lighten, makeStyles } from "@material-ui/core/styles";
+import { ThemeProvider } from "@material-ui/core";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
 import TableCell from "@material-ui/core/TableCell";
@@ -20,6 +21,8 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Switch from "@material-ui/core/Switch";
 import DeleteIcon from "@material-ui/icons/Delete";
 import FilterListIcon from "@material-ui/icons/FilterList";
+
+import theme from "../theme";
 
 function createData(name, calories, fat, carbs, protein) {
   return { name, calories, fat, carbs, protein };
@@ -95,6 +98,8 @@ function EnhancedTableHead(props) {
   };
 
   return (
+    <ThemeProvider theme={theme}>
+
     <TableHead>
       <TableRow>
         <TableCell padding="checkbox">
@@ -128,6 +133,7 @@ function EnhancedTableHead(props) {
         ))}
       </TableRow>
     </TableHead>
+    </ThemeProvider>
   );
 }
 

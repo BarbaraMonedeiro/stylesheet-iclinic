@@ -5,6 +5,9 @@ import MenuItem from "@material-ui/core/MenuItem";
 import FormHelperText from "@material-ui/core/FormHelperText";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
+import { ThemeProvider } from "@material-ui/core";
+
+import theme from "../theme";
 
 const useStyles = makeStyles(theme => ({
   formControl: {
@@ -31,7 +34,7 @@ export default function SimpleSelect() {
   };
 
   return (
-    <div>
+    <ThemeProvider theme={theme}>
       <FormControl className={classes.formControl}>
         <InputLabel id="demo-simple-select-label">Age</InputLabel>
         <Select
@@ -239,6 +242,6 @@ export default function SimpleSelect() {
           <MenuItem value={30}>Thirty</MenuItem>
         </Select>
       </FormControl>
-    </div>
+    </ThemeProvider>
   );
 }

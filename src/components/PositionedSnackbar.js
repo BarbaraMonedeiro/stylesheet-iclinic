@@ -1,6 +1,9 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
 import Snackbar from "@material-ui/core/Snackbar";
+import { ThemeProvider } from "@material-ui/core";
+
+import theme from "../theme";
 
 export default function PositionedSnackbar() {
   const [state, setState] = React.useState({
@@ -20,7 +23,7 @@ export default function PositionedSnackbar() {
   };
 
   return (
-    <div>
+    <ThemeProvider theme={theme}>
       <Button onClick={handleClick({ vertical: "top", horizontal: "center" })}>
         Top-Center
       </Button>
@@ -53,6 +56,6 @@ export default function PositionedSnackbar() {
         }}
         message={<span id="message-id">I love snacks</span>}
       />
-    </div>
+    </ThemeProvider>
   );
 }

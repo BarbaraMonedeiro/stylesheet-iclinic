@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { ThemeProvider } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
@@ -10,6 +11,8 @@ import Paper from "@material-ui/core/Paper";
 import PhoneIcon from "@material-ui/icons/Phone";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import PersonPinIcon from "@material-ui/icons/PersonPin";
+
+import theme from "../theme";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -57,6 +60,7 @@ export default function SimpleTabs() {
   };
 
   return (
+    <ThemeProvider theme={theme}>
     <div className={classes.root}>
       <AppBar position="static">
         <Tabs
@@ -93,5 +97,6 @@ export default function SimpleTabs() {
         </Tabs>
       </Paper>
     </div>
+    </ThemeProvider>
   );
 }

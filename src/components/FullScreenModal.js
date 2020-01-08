@@ -1,4 +1,5 @@
 import React from "react";
+import { ThemeProvider } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
 import ListItemText from "@material-ui/core/ListItemText";
@@ -11,6 +12,8 @@ import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import CloseIcon from "@material-ui/icons/Close";
 import Slide from "@material-ui/core/Slide";
+
+import theme from "../theme";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -28,7 +31,7 @@ export default function FullScreenDialog() {
   };
 
   return (
-    <div>
+    <ThemeProvider theme={theme}>
       <Button variant="outlined" color="primary" onClick={handleClickOpen}>
         Open full-screen dialog
       </Button>
@@ -67,6 +70,6 @@ export default function FullScreenDialog() {
           </ListItem>
         </List>
       </Dialog>
-    </div>
+    </ThemeProvider>
   );
 }

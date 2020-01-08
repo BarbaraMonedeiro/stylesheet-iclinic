@@ -1,9 +1,12 @@
 import React from "react";
+import { ThemeProvider } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Snackbar from "@material-ui/core/Snackbar";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
+
+import theme from "../theme";
 
 const useStyles = makeStyles(theme => ({
   close: {
@@ -28,7 +31,7 @@ export default function SimpleSnackbar() {
   };
 
   return (
-    <div>
+    <ThemeProvider theme={theme}>
       <Button onClick={handleClick}>Open simple snackbar</Button>
       <Snackbar
         anchorOrigin={{
@@ -62,6 +65,6 @@ export default function SimpleSnackbar() {
           </IconButton>
         ]}
       />
-    </div>
+    </ThemeProvider>
   );
 }

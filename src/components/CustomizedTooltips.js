@@ -1,8 +1,11 @@
 import React from "react";
+import Typography from "@material-ui/core/Typography";
 import { withStyles, makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Tooltip from "@material-ui/core/Tooltip";
-import Typography from "@material-ui/core/Typography";
+import { ThemeProvider } from "@material-ui/core";
+
+import theme from "../theme";
 
 const LightTooltip = withStyles(theme => ({
   tooltip: {
@@ -40,6 +43,7 @@ const HtmlTooltip = withStyles(theme => ({
 
 export default function CustomizedTooltips() {
   return (
+    <ThemeProvider theme={theme}>
     <div>
       <LightTooltip title="Add">
         <Button>Light</Button>
@@ -59,5 +63,6 @@ export default function CustomizedTooltips() {
         <Button>HTML</Button>
       </HtmlTooltip>
     </div>
+    </ThemeProvider>
   );
 }

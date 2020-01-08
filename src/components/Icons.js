@@ -16,6 +16,9 @@ import ThreeDRotationIcon from "@material-ui/icons/ThreeDRotation";
 import FourKIcon from "@material-ui/icons/FourK";
 import ThreeSixtyIcon from "@material-ui/icons/ThreeSixty";
 import { makeStyles } from "@material-ui/core/styles";
+import { ThemeProvider } from "@material-ui/core";
+
+import theme from "../theme";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -28,6 +31,7 @@ export default function SvgMaterialIcons() {
 
   return (
     <>
+      <ThemeProvider theme={theme}>
       <Grid container className={classes.root}>
         <Grid item xs={4}>
           <Typography>Filled</Typography>
@@ -84,6 +88,7 @@ export default function SvgMaterialIcons() {
       <HomeIcon />
       <HomeIcon fontSize="large" />
       <HomeIcon style={{ fontSize: 40 }} />
+      </ThemeProvider>
     </>
   );
 }

@@ -1,9 +1,12 @@
 import React from "react";
+import { ThemeProvider } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
+
+import theme from "../theme";
 
 export default function Color() {
   return (
-    <React.Fragment>
+    <ThemeProvider theme={theme}>
       <Typography variant="h1" component="h2" gutterBottom>
         h1. Heading
       </Typography>
@@ -51,6 +54,6 @@ export default function Color() {
       <Typography variant="overline" display="block" gutterBottom>
         overline text
       </Typography>
-    </React.Fragment>
+    </ThemeProvider>
   );
 }

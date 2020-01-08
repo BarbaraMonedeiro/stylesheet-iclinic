@@ -1,8 +1,11 @@
 import React from "react";
+import { ThemeProvider } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import Breadcrumbs from "@material-ui/core/Breadcrumbs";
 import Link from "@material-ui/core/Link";
 import NavigateNextIcon from "@material-ui/icons/NavigateNext";
+
+import theme from "../theme";
 
 function handleClick(event) {
   event.preventDefault();
@@ -12,6 +15,7 @@ function handleClick(event) {
 export default function SimpleBreadcrumbs() {
   return (
     <>
+    <ThemeProvider theme={theme}>
       <Breadcrumbs aria-label="breadcrumb">
         <Link color="inherit" href="/" onClick={handleClick}>
           Material-UI
@@ -89,6 +93,7 @@ export default function SimpleBreadcrumbs() {
         </Link>
         <Typography color="textPrimary">Belts</Typography>
       </Breadcrumbs>
+      </ThemeProvider>
     </>
   );
 }

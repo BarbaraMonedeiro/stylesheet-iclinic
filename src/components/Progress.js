@@ -8,6 +8,9 @@ import Fab from "@material-ui/core/Fab";
 import CheckIcon from "@material-ui/icons/Check";
 import SaveIcon from "@material-ui/icons/Save";
 import LinearProgress from "@material-ui/core/LinearProgress";
+import { ThemeProvider } from "@material-ui/core";
+
+import theme from "../theme";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -69,6 +72,7 @@ export default function CircularIntegration() {
   };
 
   return (
+    <ThemeProvider theme={theme}>
     <div className={classes.root}>
       <div className={classes.wrapper}>
         <Fab
@@ -105,5 +109,6 @@ export default function CircularIntegration() {
       <LinearProgress />
       <LinearProgress color="secondary" />
     </div>
+    </ThemeProvider>
   );
 }

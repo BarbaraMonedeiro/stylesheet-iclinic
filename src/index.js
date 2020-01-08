@@ -52,12 +52,11 @@ function App() {
           <Typography variant="h1" gutterBottom>
             Hello Material Sandbox
           </Typography>
+          <br />
           <Typography variant="h4" gutterBottom>
             Color Sample
           </Typography>
-          <Typography variant="body1" gutterBottom>
-            <ColorSample />
-          </Typography>
+          <ColorSample />
           <br />
           <Typography variant="h4" gutterBottom>
             Typography
@@ -77,9 +76,7 @@ function App() {
           <Typography variant="h4" gutterBottom>
             Shadows
           </Typography>
-          <Typography variant="body1" gutterBottom>
-            <Shadows />
-          </Typography>
+          <Shadows />
           <br />
           <Typography variant="h4" gutterBottom>
             Simple Popover
@@ -139,7 +136,7 @@ function App() {
           <Typography variant="h4" gutterBottom>
             TextField
           </Typography>
-          <TextField />
+          <TextField /> 
           <br />
           <Typography variant="h4" gutterBottom>
             DatePicker
@@ -169,7 +166,7 @@ function App() {
           <Typography variant="h4" gutterBottom>
             Vertical Stepper
           </Typography>
-          <VerticalStepper />
+          <VerticalStepper /> 
           <br />
           <Typography variant="h4" gutterBottom>
             SimpleTabs

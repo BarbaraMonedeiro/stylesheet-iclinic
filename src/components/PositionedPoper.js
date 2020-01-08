@@ -1,10 +1,13 @@
 import React from "react";
+import { ThemeProvider } from "@material-ui/core";
 import Popper from "@material-ui/core/Popper";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import Fade from "@material-ui/core/Fade";
 import Paper from "@material-ui/core/Paper";
+
+import theme from "../theme";
 
 export default function PositionedPopper() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -18,7 +21,7 @@ export default function PositionedPopper() {
   };
 
   return (
-    <div>
+    <ThemeProvider theme={theme}>
       <Popper open={open} anchorEl={anchorEl} placement={placement} transition>
         {({ TransitionProps }) => (
           <Fade {...TransitionProps} timeout={350}>
@@ -62,6 +65,6 @@ export default function PositionedPopper() {
           <Button onClick={handleClick("bottom-end")}>bottom-end</Button>
         </Grid>
       </Grid>
-    </div>
+    </ThemeProvider>
   );
 }

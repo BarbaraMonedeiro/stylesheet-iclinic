@@ -12,10 +12,13 @@ import IconButton from "@material-ui/core/IconButton";
 import DeleteIcon from "@material-ui/icons/Delete";
 import AlarmIcon from "@material-ui/icons/Alarm";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
+import { ThemeProvider } from "@material-ui/core";
+
+import theme from "../theme";
 
 export default function ContainedButtons() {
   return (
-    <React.Fragment>
+    <ThemeProvider theme={theme}>
       <Typography variant="h5" gutterBottom>
         Contained Buttons
       </Typography>
@@ -234,6 +237,6 @@ export default function ContainedButtons() {
           </IconButton>
         </Grid>
       </Grid>
-    </React.Fragment>
+    </ThemeProvider>
   );
 }
